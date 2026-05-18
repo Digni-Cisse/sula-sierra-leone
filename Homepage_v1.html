@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sula Equipment | Exclusive Engirise Dealer Sierra Leone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; background-color: #0F0F0F; color: #FFFFFF; }
+        
+        .glass {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .engirise-red { color: #ED1C24; }
+        .bg-engirise-red { background-color: #ED1C24; }
+        .sula-blue { color: #0056B3; }
+        .bg-sula-blue { background-color: #0056B3; }
+
+        .angular-cut {
+            clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+        }
+
+        .hero-slide {
+            display: none;
+            transition: opacity 1s ease-in-out;
+        }
+        .hero-slide.active { display: block; }
+
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            background-color: #25D366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            transition: transform 0.3s;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- WhatsApp Sticky -->
+    <a href="#" class="whatsapp-float">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass top-0">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <!-- Replace with Logo Image -->
+                <div class="text-2xl font-extrabold tracking-tighter">
+                    <span class="sula-blue">SULA</span> <span class="text-white font-light text-lg">EQUIPMENT</span>
+                </div>
+            </div>
+            <div class="hidden md:flex gap-8 font-semibold text-sm tracking-widest uppercase">
+                <a href="#" class="hover:engirise-red transition">About</a>
+                <a href="#" class="hover:engirise-red transition">Equipment</a>
+                <a href="#" class="hover:engirise-red transition">Industries</a>
+                <a href="#" class="hover:engirise-red transition">Services</a>
+                <a href="#" class="hover:engirise-red transition">Contact</a>
+            </div>
+            <a href="#" class="bg-white text-black px-6 py-2 font-bold text-xs uppercase angular-cut hover:bg-engirise-red hover:text-white transition">
+                Request Quote <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative h-screen flex items-center overflow-hidden">
+        <!-- Background Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent z-10"></div>
+        
+        <!-- Slides -->
+        <div class="hero-slide active absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1670641308198-a466142b6b6f?auto=format&fit=crop&q=80');">
+            <div class="relative z-20 max-w-7xl mx-auto px-6 h-full flex flex-col justify-center">
+                <span class="text-sm font-bold tracking-[0.3em] uppercase engirise-red mb-4 block">Sula Equipment · Exclusive Engirise Dealer</span>
+                <h1 class="text-5xl md:text-7xl font-extrabold max-w-4xl leading-tight mb-6">FORGING SIERRA LEONE’S <br> TOUGHEST PROJECTS</h1>
+                <p class="text-xl text-gray-300 max-w-2xl mb-10">Heavy machinery engineered for laterite, heat, and high-intensity cycles – from mining operations to Freetown logistics and Port Loko highways.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#" class="bg-sula-blue text-white px-8 py-4 font-bold uppercase angular-cut">Browse Machines</a>
+                    <a href="#" class="glass border-white/20 text-white px-8 py-4 font-bold uppercase angular-cut hover:bg-white hover:text-black transition">WhatsApp Us <i class="fab fa-whatsapp ml-2"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-slide absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1711012604128-8339024a3e12?auto=format&fit=crop&q=80');">
+            <div class="relative z-20 max-w-7xl mx-auto px-6 h-full flex flex-col justify-center">
+                <span class="text-sm font-bold tracking-[0.3em] uppercase engirise-red mb-4 block">Sula Equipment · Exclusive Engirise Dealer</span>
+                <h1 class="text-5xl md:text-7xl font-extrabold max-w-4xl leading-tight mb-6">BUILT FOR MINING & <br> HIGH-DEMAND OPERATIONS</h1>
+                <p class="text-xl text-gray-300 max-w-2xl mb-10">High-tonnage excavators and loaders built for the iron ore, gold, and rutile mines of Tonkolili and Kono.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#" class="bg-sula-blue text-white px-8 py-4 font-bold uppercase angular-cut">Browse Machines</a>
+                    <a href="#" class="glass border-white/20 text-white px-8 py-4 font-bold uppercase angular-cut hover:bg-white hover:text-black transition">WhatsApp Us <i class="fab fa-whatsapp ml-2"></i></a>
+                </div>
+            </div>
+        </div>
+
+       <div class="hero-slide absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1551356522-dea94b68b81f?auto=format&fit=crop&q=80');">
+            <div class="relative z-20 max-w-7xl mx-auto px-6 h-full flex flex-col justify-center">
+                <span class="text-sm font-bold tracking-[0.3em] uppercase engirise-red mb-4 block">Sula Equipment · Exclusive Engirise Dealer</span>
+                <h1 class="text-5xl md:text-7xl font-extrabold max-w-4xl leading-tight mb-6">ZERO-DOWNTIME WITH <br>AFRICA-READY SUPPORT</h1>
+                <p class="text-xl text-gray-300 max-w-2xl mb-10">Reliable equipment, local genuine spare parts, and mobile field support for any site in Sierra Leone.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#" class="bg-sula-blue text-white px-8 py-4 font-bold uppercase angular-cut">Browse Machines</a>
+                    <a href="#" class="glass border-white/20 text-white px-8 py-4 font-bold uppercase angular-cut hover:bg-white hover:text-black transition">WhatsApp Us <i class="fab fa-whatsapp ml-2"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Bottom Strip -->
+        <div class="absolute bottom-0 w-full z-30 glass border-t border-white/10 py-6">
+            <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-between items-center text-xs font-bold tracking-widest uppercase text-gray-400">
+                <span>30+ Models</span>
+                <span class="hidden md:block text-white/20">|</span>
+                <span>Mining & Infrastructure Ready</span>
+                <span class="hidden md:block text-white/20">|</span>
+                <span>Genuine Spare Parts</span>
+                <span class="hidden md:block text-white/20">|</span>
+                <span>24/7 Support</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTNERSHIP BANNER -->
+    <div class="bg-sula-blue py-6 relative z-40">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-4">
+                <i class="fas fa-check-circle text-white text-xl"></i>
+                <h2 class="text-xl font-extrabold tracking-tight uppercase">Exclusive Dealer Of ENGIRISE</h2>
+            </div>
+            <div class="flex gap-6 text-[10px] font-bold uppercase tracking-widest">
+                <span class="bg-black/20 px-3 py-1 rounded">Manufacturer Backed</span>
+                <span class="bg-black/20 px-3 py-1 rounded">Tropicalized Specs</span>
+                <span class="bg-black/20 px-3 py-1 rounded">Genuine Parts Support</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- POPULAR MACHINES -->
+    <section class="py-24 px-6 reveal">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest engirise-red">Featured Equipment</span>
+                    <h2 class="text-4xl font-extrabold mt-2">Popular Machines in Sierra Leone</h2>
+                </div>
+                <a href="#" class="text-sm font-bold uppercase border-b-2 border-engirise-red pb-1">View All Machines</a>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass overflow-hidden group">
+                    <div class="h-64 bg-cover bg-center transition duration-500 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1583024011792-b165975b52f5?auto=format&fit=crop&q=80');"></div>
+                    <div class="p-8">
+                        <span class="text-[10px] font-bold uppercase text-gray-500">Excavators</span>
+                        <h3 class="text-xl font-bold mt-2 mb-4">EN220 Crawler Excavator</h3>
+                        <div class="flex justify-between border-t border-white/10 pt-4 text-[10px] uppercase font-bold text-gray-400">
+                            <span>Weight: 22,000kg</span>
+                            <span>Power: 124 kW</span>
+                        </div>
+                        <a href="#" class="mt-6 block text-center bg-white text-black py-3 font-bold uppercase text-xs angular-cut group-hover:bg-engirise-red group-hover:text-white transition">View Machine</a>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="glass overflow-hidden group">
+                    <div class="h-64 bg-cover bg-center transition duration-500 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1629807473015-41699c4471b5?auto=format&fit=crop&q=80');"></div>
+                    <div class="p-8">
+                        <span class="text-[10px] font-bold uppercase text-gray-500">Loaders</span>
+                        <h3 class="text-xl font-bold mt-2 mb-4">WL50 Wheel Loader</h3>
+                        <div class="flex justify-between border-t border-white/10 pt-4 text-[10px] uppercase font-bold text-gray-400">
+                            <span>Capacity: 5.0 Ton</span>
+                            <span>Bucket: 3.0 m³</span>
+                        </div>
+                        <a href="#" class="mt-6 block text-center bg-white text-black py-3 font-bold uppercase text-xs angular-cut group-hover:bg-engirise-red group-hover:text-white transition">View Machine</a>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="glass overflow-hidden group">
+                    <div class="h-64 bg-cover bg-center transition duration-500 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1612878100556-032bbf1b3bab?auto=format&fit=crop&q=80');"></div>
+                    <div class="p-8">
+                        <span class="text-[10px] font-bold uppercase text-gray-500">Backhoe Loaders</span>
+                        <h3 class="text-xl font-bold mt-2 mb-4">BL124D Backhoe</h3>
+                        <div class="flex justify-between border-t border-white/10 pt-4 text-[10px] uppercase font-bold text-gray-400">
+                            <span>Drive: 4x4</span>
+                            <span>Power: 74 kW</span>
+                        </div>
+                        <a href="#" class="mt-6 block text-center bg-white text-black py-3 font-bold uppercase text-xs angular-cut group-hover:bg-engirise-red group-hover:text-white transition">View Machine</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INDUSTRIES SECTION -->
+    <section class="py-24 bg-[#141414] px-6 reveal">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
+            <div class="lg:w-1/2">
+                <span class="text-xs font-bold uppercase tracking-widest engirise-red">Industries We Serve</span>
+                <h2 class="text-5xl font-extrabold mt-4 mb-10 leading-tight">Machinery solutions for the industries building Sierra Leone.</h2>
+                
+                <!-- Custom Tabs -->
+                <div class="flex flex-wrap gap-2 mb-8">
+                    <button onclick="openTab(event, 'mining')" class="tab-btn px-4 py-2 text-[10px] font-bold uppercase glass border-white/10 angular-cut">Mining & Quarry</button>
+                    <button onclick="openTab(event, 'infra')" class="tab-btn px-4 py-2 text-[10px] font-bold uppercase glass border-white/10 angular-cut">Infrastructure</button>
+                    <button onclick="openTab(event, 'logistics')" class="tab-btn px-4 py-2 text-[10px] font-bold uppercase glass border-white/10 angular-cut">Logistics & Ports</button>
+                    <button onclick="openTab(event, 'construction')" class="tab-btn px-4 py-2 text-[10px] font-bold uppercase glass border-white/10 angular-cut">Construction</button>
+                    <button onclick="openTab(event, 'agri')" class="tab-btn px-4 py-2 text-[10px] font-bold uppercase glass border-white/10 angular-cut">Agriculture</button>
+                </div>
+
+                <div id="mining" class="tab-content active space-y-4 text-gray-400">
+                    <div class="flex items-center gap-3"><i class="fas fa-caret-right engirise-red"></i> Heavy excavation for hard rock and overburden</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-caret-right engirise-red"></i> High-cycle loading operations</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-caret-right engirise-red"></i> Haul road maintenance</div>
+                </div>
+                <div id="infra" class="tab-content space-y-4 text-gray-400">
+                    <div class="flex items-center gap-3"><i class="fas fa-caret-right engirise-red"></i> Road construction and rehabilitation</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-caret-right engirise-red"></i> Rural connectivity projects</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-caret-right engirise-red"></i> Compaction and surface finishing</div>
+                </div>
+                <div id="logistics" class="tab-content space-y-4 text-gray-400">
+                    <div class="flex items-center gap-3"><i class="fas fa-caret-right engirise-red"></i> Container and cargo handling</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-caret-right engirise-red"></i> Queen Elizabeth II Quay and yard operations</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-caret-right engirise-red"></i> Diesel forklifts and telehandlers</div>
+                </div>
+                <div id="construction" class="tab-content space-y-4 text-gray-400">
+                    <div class="flex items-center gap-3"><i class="fas fa-caret-right engirise-red"></i> Urban development in Freetown</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-caret-right engirise-red"></i> Material handling and site logistics</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-caret-right engirise-red"></i> Backhoes and compactors for tight sites</div>
+                </div>
+                <div id="agri" class="tab-content space-y-4 text-gray-400">
+                    <div class="flex items-center gap-3"><i class="fas fa-caret-right engirise-red"></i> Land clearing and rural access roads</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-caret-right engirise-red"></i> Bulk material handling</div>
+                    <div class="flex items-center gap-3"><i class="fas fa-caret-right engirise-red"></i> Versatile loader and backhoe platforms</div>
+                </div>
+                <!-- Other tab contents follow same pattern... -->
+
+                <a href="#" class="mt-12 inline-block bg-white text-black px-10 py-4 font-extrabold uppercase angular-cut">Explore Industry Solutions</a>
+            </div>
+            <div class="lg:w-1/2 relative">
+                <div class="w-full h-[500px] bg-cover bg-center rounded-lg shadow-2xl" style="background-image: url('https://images.unsplash.com/photo-1628487749130-2d41acb1802a?auto=format&fit=crop&q=80');">
+                    <div class="absolute inset-0 bg-black/40 rounded-lg"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MINING SPOTLIGHT -->
+    <section class="py-24 px-6 bg-cover bg-fixed relative" style="background-image: url('https://images.unsplash.com/photo-1628487749130-2d41acb1802a?auto=format&fit=crop&q=80');">
+        <div class="absolute inset-0 bg-black/90"></div>
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="max-w-2xl">
+                <span class="text-xs font-bold uppercase tracking-widest engirise-red">Sula Range Specialization</span>
+                <h2 class="text-5xl font-extrabold mt-4 mb-8">Built for the Mines of Tonkolili and Kono</h2>
+                <p class="text-xl text-gray-400 mb-8">Sierra Leone’s mining conditions are among the most abrasive in the world. Sula machines are specifically “Tropicalized” with powerful cooling and dust filtration.</p>
+                
+                <h4 class="font-bold uppercase text-sm mb-6 tracking-widest text-white">Our Mining-Ready Lineup:</h4>
+                <div class="grid grid-cols-2 gap-4 mb-10 text-sm font-bold uppercase text-gray-300">
+                    <div class="flex items-center gap-2"><i class="fas fa-shield-alt text-xs engirise-red"></i> 22–50 ton excavators</div>
+                    <div class="flex items-center gap-2"><i class="fas fa-shield-alt text-xs engirise-red"></i> Wheel loaders</div>
+                    <div class="flex items-center gap-2"><i class="fas fa-shield-alt text-xs engirise-red"></i> Motor graders</div>
+                    <div class="flex items-center gap-2"><i class="fas fa-shield-alt text-xs engirise-red"></i> Vibratory road rollers</div>
+                    <div class="flex items-center gap-2"><i class="fas fa-shield-alt text-xs engirise-red"></i> Telehandlers & Support</div>
+                </div>
+                
+                <a href="#" class="bg-sula-blue text-white px-10 py-5 font-extrabold uppercase angular-cut inline-block">Get Mining Details <i class="fab fa-whatsapp ml-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="py-24 px-6 reveal">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-end mb-16">
+                <div class="max-w-xl">
+                    <span class="text-xs font-bold uppercase tracking-widest engirise-red">Full Lifecycle Support</span>
+                    <h2 class="text-5xl font-extrabold mt-4 leading-tight">Support that goes beyond machine delivery.</h2>
+                </div>
+                <a href="#" class="bg-white text-black px-8 py-3 font-bold uppercase angular-cut">Explore Services</a>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass p-10 hover:border-engirise-red transition group">
+                    <i class="fas fa-handshake text-3xl mb-6 engirise-red"></i>
+                    <h3 class="text-lg font-bold mb-4">Sales & Commissioning</h3>
+                    <p class="text-sm text-gray-400">Direct-import pricing with professional on-site assembly and operator handover.</p>
+                </div>
+                <div class="glass p-10 hover:border-engirise-red transition group">
+                    <i class="fas fa-clock text-3xl mb-6 engirise-red"></i>
+                    <h3 class="text-lg font-bold mb-4">Project Rentals</h3>
+                    <p class="text-sm text-gray-400">Flexible short and long-term fleet solutions for contractors - tailored to projects.</p>
+                </div>
+                <div class="glass p-10 hover:border-engirise-red transition group">
+                    <i class="fas fa-cogs text-3xl mb-6 engirise-red"></i>
+                    <h3 class="text-lg font-bold mb-4">Freetown Parts Hub</h3>
+                    <p class="text-sm text-gray-400">Local inventory of filters, seals, and wear parts to kill downtime.</p>
+                </div>
+                <div class="glass p-10 hover:border-engirise-red transition group">
+                    <i class="fas fa-truck-pickup text-3xl mb-6 engirise-red"></i>
+                    <h3 class="text-lg font-bold mb-4">Mobile Field Support</h3>
+                    <p class="text-sm text-gray-400">Sula technicians deploy directly to your remote site for diagnostics and repair.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="py-24 bg-[#141414] px-6">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16">
+            <div class="lg:w-1/2">
+                <span class="text-xs font-bold uppercase tracking-widest engirise-red">About Sula Equipment</span>
+                <h2 class="text-5xl font-extrabold mt-4 mb-8">Engineered for the work that builds nations.</h2>
+                <div class="space-y-6 text-gray-400 leading-relaxed">
+                    <p>Sula Equipment is the exclusive regional dealer of Engirise - a global manufacturer of heavy construction and industrial machinery. Our inventory is built for the demanding operating conditions of Sierra Leone and West Africa.</p>
+                    <p>With Sula you get <span class="text-white font-bold">“Direct-to-Factory"</span> access to machines configured for our heat, our dust, and our high-stakes deadlines.</p>
+                    <p>Genuine spare parts and responsive field support makes Sula the #1 choice for Tier-1 mining operators, road project subcontractors, and all who need tough work done.</p>
+                </div>
+                <div class="grid grid-cols-3 gap-8 mt-12 py-8 border-y border-white/10">
+                    <div>
+                        <div class="text-3xl font-black text-white">30+</div>
+                        <div class="text-[9px] uppercase font-bold text-gray-500 mt-1">Machine Models</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-black text-white">SL Wide</div>
+                        <div class="text-[9px] uppercase font-bold text-gray-500 mt-1">Support Coverage</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-black text-white">100%</div>
+                        <div class="text-[9px] uppercase font-bold text-gray-500 mt-1">Factory Trained Techs</div>
+                    </div>
+                </div>
+                <a href="#" class="mt-12 inline-block font-bold uppercase text-sm border-b-2 border-sula-blue pb-1">Learn More About Sula <i class="fas fa-chevron-right ml-2"></i></a>
+            </div>
+            <div class="lg:w-1/2 flex items-center">
+                <!-- Visual Composition -->
+                <div class="grid grid-cols-2 gap-4 w-full">
+                    <div class="h-80 rounded-lg bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1611395813517-41f9be5e292d?auto=format&fit=crop&q=80');"></div>
+                    <div class="h-80 rounded-lg bg-cover bg-center mt-12" style="background-image: url('https://images.unsplash.com/photo-1632638820111-e3d3eef487d4?auto=format&fit=crop&q=80');"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="py-24 px-6 reveal">
+        <div class="max-w-4xl mx-auto glass p-16 text-center rounded-3xl border-2 border-white/10 relative overflow-hidden">
+            <!-- Background Accent -->
+            <div class="absolute -top-10 -right-10 w-40 h-40 bg-sula-blue/20 blur-3xl"></div>
+            
+            <span class="text-xs font-bold uppercase tracking-widest engirise-red">Forge Forward</span>
+            <h2 class="text-5xl font-black mt-4 mb-8 uppercase leading-tight">Ready to Equip your Operation?</h2>
+            <p class="text-lg text-gray-400 mb-12">Tell us about your site, industry, and project requirements. Our team is active and ready to discuss machine specs, shipping timelines, and flexible access options.</p>
+            
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="#" class="bg-sula-blue text-white px-10 py-5 font-extrabold uppercase angular-cut">Contact Sula Experts <i class="fab fa-whatsapp ml-2"></i></a>
+                <a href="#" class="bg-white text-black px-10 py-5 font-extrabold uppercase angular-cut">Request a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="py-24 px-6 bg-[#0A0A0A]">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest engirise-red">Expert Advice</span>
+                <h2 class="text-4xl font-extrabold mt-4">Heavy machinery solutions for Sierra Leone projects.</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="glass p-6">
+                    <h3 class="font-bold text-lg mb-3">What is the best excavator size for mining in Sierra Leone?</h3>
+                    <p class="text-gray-400 text-sm">We recommend our 33-ton to 50-ton Engirise excavators for mining in Sierra Leone. Their high breakout force makes them perfect for the iron ore and gold sectors in Tonkolili and Kono.</p>
+                </div>
+                <div class="glass p-6">
+                    <h3 class="font-bold text-lg mb-3">Do you have spare parts available in Freetown?</h3>
+                    <p class="text-gray-400 text-sm">Yes. We maintain a dedicated parts hub in Freetown. We stock genuine filters, undercarriage components, and hydraulic seals to ensure rapid turnaround.</p>
+                </div>
+                <div class="glass p-6">
+                    <h3 class="font-bold text-lg mb-3">Are your machines "Tropicalized" for West African heat?</h3>
+                    <p class="text-gray-400 text-sm">Yes, every machine Sula Equipment imports is tropicalized. They are configured with high-ambient cooling packages (50°C+) and heavy-duty dust filtration.</p>
+                </div>
+                <div class="glass p-6">
+                    <h3 class="font-bold text-lg mb-3">Can you provide on-site maintenance in remote districts?</h3>
+                    <p class="text-gray-400 text-sm">Absolutely. Our field service teams travel to any district in Sierra Leone for on-site servicing, maintenance, and emergency repairs.</p>
+                </div>
+                <div class="glass p-6">
+                    <h3 class="font-bold text-lg mb-3">Do you offer Rent-to-Own options?</h3>
+                    <p class="text-gray-400 text-sm">Yes, Sula Equipment offers flexible rental and lease-to-purchase agreements. All options are tailored to the cash flow of Sierra Leonean construction and mining contractors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-16 border-t border-white/5 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 lg:col-span-2">
+                    <div class="text-2xl font-black sula-blue mb-6">SULA EQUIPMENT</div>
+                    <p class="text-gray-500 max-w-sm mb-8">Exclusive regional dealer of Engirise heavy machinery. Supporting mining, infrastructure and construction projects across Sierra Leone with reliable equipment and full lifecycle support.</p>
+                    <div class="flex gap-4 text-xl text-gray-500">
+                        <a href="#"><i class="fab fa-linkedin hover:text-white transition"></i></a>
+                        <a href="#"><i class="fab fa-facebook hover:text-white transition"></i></a>
+                        <a href="#"><i class="fab fa-instagram hover:text-white transition"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase text-xs tracking-widest text-white mb-6">Quick Links</h4>
+                    <ul class="text-gray-500 text-sm space-y-3">
+                        <li><a href="#" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition">Inventory</a></li>
+                        <li><a href="#" class="hover:text-white transition">Industries</a></li>
+                        <li><a href="#" class="hover:text-white transition">Services</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase text-xs tracking-widest text-white mb-6">Contact Hub</h4>
+                    <ul class="text-gray-500 text-sm space-y-4">
+                        <li class="flex items-center gap-3"><i class="fas fa-phone-alt sula-blue"></i> +232 (0) XX XXX XXX</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-envelope sula-blue"></i> info@sulaequipment.com</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-map-marker-alt sula-blue"></i> Freetown, Sierra Leone</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase font-bold text-gray-600 gap-4">
+                <span>© 2026 Sula Equipment. All Rights Reserved.</span>
+                <div class="flex gap-8">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hero Slider
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 6000);
+
+        // Tab Switching
+        function openTab(evt, tabName) {
+            let i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("bg-sula-blue", "border-sula-blue");
+                tablinks[i].classList.add("glass", "border-white/10");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("bg-sula-blue", "border-sula-blue");
+            evt.currentTarget.classList.remove("glass", "border-white/10");
+        }
+
+        // Reveal on Scroll
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("visible");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal(); // Run on load
+    </script>
+</body>
+</html>
