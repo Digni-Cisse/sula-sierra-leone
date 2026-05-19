@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Sula Equipment - Forging West Africa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sula-blue: #0056B3;
+            --engirise-red: #ED1C24;
+            --off-white: #F8FAFC;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--off-white); color: #1A1A1A; overflow-x: hidden; }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
+        
+        /* Glassmorphism Styles */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+
+        .glass {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+
+        .dark-glass {
+            background: rgba(15, 15, 15, 0.9);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Angular UI Elements */
+        .angular-cut { clip-path: polygon(0 0, 100% 0, 96% 100%, 0% 100%); }
+        .angular-cut-reverse { clip-path: polygon(4% 0, 100% 0, 100% 100%, 0% 100%); }
+
+        /* Animations */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        .hover-lift { transition: transform 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-10px); }
+
+        .line-accent { height: 2px; width: 50px; background-color: var(--sula-blue); display: inline-block; margin-bottom: 8px; }
+
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            background-color: #25D366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            transition: transform 0.3s;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+    </style>
+</head>
+<body>
+
+    <!-- WhatsApp Sticky -->
+    <a href="#" class="whatsapp-float">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass top-0">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <!-- Replace with Logo Image -->
+                <div class="text-2xl font-extrabold tracking-tighter">
+                    <a href="index.html" class="sula-blue">SULA</span> <span class="text-white font-light text-lg">EQUIPMENT</a>
+                </div>
+            </div>
+            <div class="hidden md:flex gap-8 font-semibold text-sm tracking-widest uppercase">
+                <a href="#" class="hover:engirise-red transition">About</a>
+                <a href="#" class="hover:engirise-red transition">Equipment</a>
+                <a href="#" class="hover:engirise-red transition">Industries</a>
+                <a href="#" class="hover:engirise-red transition">Services</a>
+                <a href="#" class="hover:engirise-red transition">Contact</a>
+            </div>
+            <a href="#" class="bg-white text-black px-6 py-2 font-bold text-xs uppercase angular-cut hover:bg-engirise-red hover:text-white transition">
+                Request Quote <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-[85vh] flex items-center px-6 pt-24 overflow-hidden bg-white">
+        <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center">
+            <div class="reveal">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="line-accent"></div>
+                    <span class="text-xs font-bold uppercase tracking-[0.3em] text-gray-500">About Us</span>
+                </div>
+                <h1 class="text-6xl md:text-7xl font-extrabold text-black leading-none mb-8">
+                    Forging the Future of West Africa.
+                </h1>
+                <p class="text-xl text-gray-600 leading-relaxed max-w-xl">
+                    Strong nations depend on strong machinery. Sula Equipment is inspired by the towering Sula Range – committed to durability, elevation, and unwavering strength.
+                </p>
+            </div>
+            <div class="relative reveal" style="transition-delay: 200ms;">
+                <div class="rounded-3xl overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1621355254227-14b1001a91c9?auto=format&fit=crop&q=80" alt="Heavy Machinery Sula" class="w-full h-[600px] object-cover">
+                </div>
+                <!-- Floating Badge -->
+                <div class="absolute -bottom-10 -left-10 glass-card p-8 rounded-2xl hidden md:block">
+                    <p class="text-4xl font-black text-blue-800">5+</p>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500">Years on the Ground</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 1: THE PARTNERSHIP -->
+    <section class="py-24 px-6 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-3 gap-16">
+                <div class="lg:col-span-1 reveal">
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-red-600">Manufacturer Power. Local Presence.</span>
+                    <h2 class="text-4xl font-extrabold mt-4 mb-6 leading-tight">The Exclusive Engirise Pipeline: Direct to Your Site.</h2>
+                    <p class="text-gray-600 mb-8 leading-relaxed">Sula Equipment is the official exclusive dealer for Engirise in Sierra Leone. We connect you to a direct, factory-backed pipeline: from the regional manufacturing hub in Nairobi to our yard in Freetown.</p>
+                    <a href="https://engirise.africa" target="_blank" class="inline-flex items-center gap-3 font-bold text-sm uppercase tracking-wider border-b-2 border-red-600 pb-1 hover:text-red-600 transition">
+                        Visit Engirise Africa <i class="fas fa-external-link-alt text-xs"></i>
+                    </a>
+                </div>
+                
+                <div class="lg:col-span-2 bg-white rounded-3xl p-12 shadow-sm border border-gray-100 reveal" style="transition-delay: 300ms;">
+                    <h3 class="text-2xl font-bold mb-10">What this means for You</h3>
+                    <p class="text-gray-500 mb-10">The Sula-Engirise single-source partnership eliminates grey market risks and third-party middlemen.</p>
+                    
+                    <div class="grid md:grid-cols-1 gap-8">
+                        <div class="flex gap-6 items-start">
+                            <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center shrink-0"><i class="fas fa-tags text-blue-600"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg">Direct-Import Pricing</h4>
+                                <p class="text-gray-500">Premium engineering without the distributor markup.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center shrink-0"><i class="fas fa-user-gear text-blue-600"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg">Zero-Guesswork Support</h4>
+                                <p class="text-gray-500">Mechanics trained by Engirise Africa engineers.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center shrink-0"><i class="fas fa-shield-alt text-blue-600"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg">The Sula Warranty</h4>
+                                <p class="text-gray-500">Every machine is backed by a full manufacturer warranty.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: TECHNICAL EDGE -->
+    <section class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto text-center reveal">
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-blue-600">Hinterland-Ready Specs</span>
+            <h2 class="text-5xl font-extrabold mt-4 mb-16">Tropicalized for the Extremes of the <br>West African Interior.</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Point 1 -->
+                <div class="glass-card p-10 rounded-3xl hover-lift">
+                    <div class="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-lg shadow-blue-200">
+                        <i class="fas fa-temperature-high text-2xl"></i>
+                    </div>
+                    <h4 class="font-extrabold text-xl mb-4">Advanced Heat Dissipation</h4>
+                    <p class="text-sm text-gray-500 leading-relaxed">Radiators and cooling systems designed to operate at 100% duty cycle in 50°C+ ambient temperatures.</p>
+                </div>
+                <!-- Point 2 -->
+                <div class="glass-card p-10 rounded-3xl hover-lift">
+                    <div class="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-lg shadow-blue-200">
+                        <i class="fas fa-wind text-2xl"></i>
+                    </div>
+                    <h4 class="font-extrabold text-xl mb-4">Multi-Stage Filtration</h4>
+                    <p class="text-sm text-gray-500 leading-relaxed">High-capacity air and fuel filters designed to block the fine dust and impurities of remote mining sites.</p>
+                </div>
+                <!-- Point 3 -->
+                <div class="glass-card p-10 rounded-3xl hover-lift">
+                    <div class="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-lg shadow-blue-200">
+                        <i class="fas fa-mountain text-2xl"></i>
+                    </div>
+                    <h4 class="font-extrabold text-xl mb-4">Gradient & Traction Optimization</h4>
+                    <p class="text-sm text-gray-500 leading-relaxed">Heavy-duty braking systems and drivetrain configurations for the rugged haul roads of the Sula Mountains.</p>
+                </div>
+            </div>
+            <a href="#" class="bg-black text-white px-12 py-5 rounded-sm font-bold uppercase tracking-widest text-sm angular-cut hover:bg-blue-700 transition inline-block">View Inventory <i class="fas fa-arrow-right ml-3"></i></a>
+        </div>
+    </section>
+
+    <!-- SECTION 3: THE SULA STORY -->
+    <section class="py-24 px-6 bg-[#0F0F0F] text-white overflow-hidden relative">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-blue-900/10 blur-[120px]"></div>
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+            <div class="reveal">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-blue-400">Sula Proven</span>
+                <h2 class="text-6xl font-extrabold mt-6 mb-10">Built for the Hard Rock</h2>
+                <div class="space-y-6 text-lg text-gray-400 leading-relaxed">
+                    <p>Our story began in the iron ore corridors and road construction camps of interior Sierra Leone. We witnessed the cost of downtime - the frustration of waiting months for a simple seal or filter.</p>
+                    <p>Sula Equipment was founded to solve the problems of downtime and stranded operations. Today, over 5 years later, we are trusted across the region for machines that mould mountains and support that builds nations.</p>
+                </div>
+            </div>
+            <div class="reveal" style="transition-delay: 200ms;">
+                <img src="https://images.unsplash.com/photo-1496331285476-d13f7fd07d99?auto=format&fit=crop&q=80" alt="Iron Ore Mining" class="rounded-3xl grayscale hover:grayscale-0 transition duration-700 shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: OUR VALUES (Mission & Vision) -->
+    <section class="py-32 px-6 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-16 rounded-[40px] shadow-sm reveal border-l-8 border-blue-600">
+                    <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-8"><i class="fas fa-bullseye text-blue-600 text-xl"></i></div>
+                    <h2 class="text-4xl font-extrabold mb-8">Our Mission</h2>
+                    <p class="text-xl text-gray-600 leading-relaxed">To eliminate operational downtime in the interior with factory-direct Engirise power and specialized servicing throughout Sierra Leone.</p>
+                </div>
+                <div class="bg-white p-16 rounded-[40px] shadow-sm reveal border-l-8 border-blue-800" style="transition-delay: 200ms;">
+                    <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-8"><i class="fas fa-eye text-blue-800 text-xl"></i></div>
+                    <h2 class="text-4xl font-extrabold mb-8">Our Vision</h2>
+                    <p class="text-xl text-gray-600 leading-relaxed">To be the dominant force in West African machinery - redefining equipment reliability from Freetown port to remote mining belts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: THE SULA ADVANTAGE -->
+    <section class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 reveal">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="h-[1px] w-12 bg-gray-300"></div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-gray-500">Uptime First</span>
+                </div>
+                <h2 class="text-5xl font-extrabold uppercase">Why Tier-1 Operators Choose Sula</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-x-12 gap-y-16 reveal" style="transition-delay: 200ms;">
+                <!-- Point 1 -->
+                <div class="flex gap-8 group">
+                    <div class="text-4xl font-black text-gray-500 group-hover:text-blue-600 transition">01</div>
+                    <div>
+                        <h4 class="font-extrabold text-2xl mb-4">District-Wide Mobility</h4>
+                        <p class="text-gray-500 leading-relaxed">Our field technicians don’t wait for you to come to Freetown. We deploy directly to any district in Sierra Leone - from Port Loko to Kenema.</p>
+                    </div>
+                </div>
+                <!-- Point 2 -->
+                <div class="flex gap-8 group">
+                    <div class="text-4xl font-black text-gray-500 group-hover:text-blue-600 transition">02</div>
+                    <div>
+                        <h4 class="font-extrabold text-2xl mb-4">Genuine Parts Hub</h4>
+                        <p class="text-gray-500 leading-relaxed">We maintain a proactive "Critical Care" inventory of genuine filters, undercarriage parts, and hydraulic components ready for immediate dispatch.</p>
+                    </div>
+                </div>
+                <!-- Point 3 -->
+                <div class="flex gap-8 group">
+                    <div class="text-4xl font-black text-gray-500 group-hover:text-blue-600 transition">03</div>
+                    <div>
+                        <h4 class="font-extrabold text-2xl mb-4">Regional Capability</h4>
+                        <p class="text-gray-500 leading-relaxed">While our heart is in Sierra Leone, our reach extends across West Africa. We support cross-border projects with the same manufacturer-backed rigour.</p>
+                    </div>
+                </div>
+                <!-- Point 4 -->
+                <div class="flex gap-8 group">
+                    <div class="text-4xl font-black text-gray-500 group-hover:text-blue-600 transition">04</div>
+                    <div>
+                        <h4 class="font-extrabold text-2xl mb-4">Financial Versatility</h4>
+                        <p class="text-gray-500 leading-relaxed">We empower local contractors through flexible access models: competitive sales, short-term project rentals, and customized Rent-to-Own plans.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-20 text-center reveal">
+                <a href="#" class="bg-sula-blue text-off-white px-10 py-4 font-bold rounded-lg hover:bg-blue-800 transition shadow-xl shadow-blue-100">Explore Sula Services <i class="fas fa-chevron-right ml-3 text-xs"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="py-24 px-6 bg-gray-50">
+        <div class="max-w-5xl mx-auto dark-glass rounded-[40px] p-12 md:p-20 text-center relative overflow-hidden reveal">
+            <div class="absolute -top-20 -left-20 w-64 h-64 bg-blue-600/20 blur-[100px]"></div>
+            
+            <span class="text-xs font-bold uppercase tracking-[0.4em] text-red-500 mb-6 block">Forge Forward</span>
+            <h2 class="text-5xl md:text-6xl font-extrabold text-white mb-8 uppercase">Ready to Equip your Operation?</h2>
+            <p class="text-gray-400 text-lg mb-12 max-w-2xl mx-auto">Tell us about your site, industry, and project requirements. Our team is active and ready to discuss machine specs, shipping timelines, and flexible access options.</p>
+            
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="#" class="bg-blue-600 text-white px-10 py-5 font-extrabold uppercase text-sm angular-cut flex items-center gap-3 hover:bg-blue-700 transition">
+                    Contact Sula Experts <i class="fab fa-whatsapp text-lg"></i>
+                </a>
+                <a href="#" class="bg-white text-black px-10 py-5 font-extrabold uppercase text-sm angular-cut items-center hover:bg-gray-100 transition">
+                    Request a Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-16 border-t border-white/5 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 lg:col-span-2">
+                    <div class="text-2xl font-black sula-blue mb-6">SULA EQUIPMENT</div>
+                    <p class="text-gray-500 max-w-sm mb-8">Exclusive regional dealer of Engirise heavy machinery. Supporting mining, infrastructure and construction projects across Sierra Leone with reliable equipment and full lifecycle support.</p>
+                    <div class="flex gap-4 text-xl text-gray-500">
+                        <a href="#"><i class="fab fa-linkedin hover:text-white transition"></i></a>
+                        <a href="#"><i class="fab fa-facebook hover:text-white transition"></i></a>
+                        <a href="#"><i class="fab fa-instagram hover:text-white transition"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase text-xs tracking-widest text-white mb-6">Quick Links</h4>
+                    <ul class="text-gray-500 text-sm space-y-3">
+                        <li><a href="#" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition">Inventory</a></li>
+                        <li><a href="#" class="hover:text-white transition">Industries</a></li>
+                        <li><a href="#" class="hover:text-white transition">Services</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase text-xs tracking-widest text-white mb-6">Contact Hub</h4>
+                    <ul class="text-gray-500 text-sm space-y-4">
+                        <li class="flex items-center gap-3"><i class="fas fa-phone-alt sula-blue"></i> +232 (0) XX XXX XXX</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-envelope sula-blue"></i> info@sulaequipment.com</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-map-marker-alt sula-blue"></i> Freetown, Sierra Leone</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase font-bold text-gray-600 gap-4">
+                <span>© 2026 Sula Equipment. All Rights Reserved.</span>
+                <div class="flex gap-8">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Scroll Reveal Logic
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
