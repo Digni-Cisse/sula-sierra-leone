@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Sula Equipment - Full Lifecycle Support</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sula-blue: #0056B3;
+            --engirise-red: #ED1C24;
+            --off-white: #F8FAFC;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--off-white); color: #1A1A1A; overflow-x: hidden; }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+
+        .glass {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .dark-glass {
+            background: rgba(15, 15, 15, 0.9);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .angular-cut { clip-path: polygon(0 0, 100% 0, 96% 100%, 0% 100%); }
+
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        .line-accent { height: 2px; width: 50px; background-color: var(--sula-blue); display: inline-block; margin-bottom: 8px; }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            background-color: #25D366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            transition: transform 0.3s;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+        /* Tab Transitions */
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.5s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .tab-btn.active { border-bottom: 3px solid var(--sula-blue); color: var(--sula-blue); }
+    </style>
+</head>
+<body>
+
+    <!-- WhatsApp Sticky -->
+    <a href="#" class="whatsapp-float">
+        <i class="fab fa-whatsapp text-3xl text-white"></i>
+    </a>
+
+    <!-- Navigation (Consistent with About Page) -->
+    <nav class="fixed w-full z-50 glass top-0">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="text-2xl font-extrabold tracking-tighter">
+                    <a href="index.html" class="text-[#0056B3]">SULA</span> <span class="text-white font-light text-lg uppercase">Equipment</a>
+                </div>
+            </div>
+            <div class="hidden md:flex gap-8 font-semibold text-sm tracking-widest uppercase text-white/80">
+                <a href="About_v1.html" class="hover:text-white transition">About</a>
+                <a href="#" class="hover:text-white transition">Equipment</a>
+                <a href="#" class="hover:text-white transition">Industries</a>
+                <a href="services.html" class="text-white transition">Services</a>
+                <a href="#" class="hover:text-white transition">Contact</a>
+            </div>
+            <a href="#" class="bg-white text-black px-6 py-2 font-bold text-xs uppercase angular-cut hover:bg-[#ED1C24] hover:text-white transition">
+                Request Quote <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (Replicated Style) -->
+    <section class="relative min-h-[85vh] flex items-center px-6 pt-24 overflow-hidden bg-white">
+        <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center">
+            <div class="reveal">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="line-accent"></div>
+                    <span class="text-xs font-bold uppercase tracking-[0.3em] text-gray-500">Sula Support Guarantee</span>
+                </div>
+                <h1 class="text-6xl md:text-7xl font-extrabold text-black leading-none mb-8">
+                    Every Machine. Every Shift. Every District.
+                </h1>
+                <p class="text-xl text-gray-600 leading-relaxed max-w-xl">
+                    A machine is only as good as the support behind it – especially in Sierra Leone’s remote mining sites. Our full lifecycle partnership eliminates downtime and protects your investment.
+                </p>
+            </div>
+            <div class="relative reveal" style="transition-delay: 200ms;">
+                <div class="rounded-3xl overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1543181139-a1916d8dd9aa?auto=format&fit=crop&q=80" alt="Sula Support Service" class="w-full h-[600px] object-cover">
+                </div>
+                <div class="absolute -bottom-10 -left-10 glass-card p-8 rounded-2xl hidden md:block">
+                    <p class="text-4xl font-black text-blue-800">24/7</p>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500">Emergency Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE SERVICES TABS SECTION -->
+    <section class="py-24 px-6 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            
+            <!-- Service Stats Strip -->
+            <div class="glass-card mb-16 rounded-3xl p-10 reveal">
+                <div class="grid md:grid-cols-3 gap-8 text-center items-center">
+                    <div>
+                        <p class="text-4xl font-black text-blue-700">16</p>
+                        <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mt-2">SL Districts</p>
+                    </div>
+                    <div class="border-x border-gray-100">
+                        <p class="text-4xl font-black text-blue-700">24/7</p>
+                        <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mt-2">Emergency Support</p>
+                    </div>
+                    <div>
+                        <p class="text-4xl font-black text-blue-700">100%</p>
+                        <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mt-2">Genuine Parts</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Header (Design Reference: Tab Roof) -->
+            <div class="border-b border-gray-200 mb-12 reveal">
+                <div class="flex flex-wrap gap-8 md:gap-12">
+                    <button onclick="openService(event, 'sales')" class="tab-btn active pb-4 text-xs font-bold uppercase tracking-widest transition">01. Sales & Commissioning</button>
+                    <button onclick="openService(event, 'rentals')" class="tab-btn pb-4 text-xs font-bold uppercase tracking-widest transition">02. Project Rentals</button>
+                    <button onclick="openService(event, 'parts')" class="tab-btn pb-4 text-xs font-bold uppercase tracking-widest transition">03. Freetown Parts Hub</button>
+                    <button onclick="openService(event, 'field')" class="tab-btn pb-4 text-xs font-bold uppercase tracking-widest transition">04. Mobile Field Support</button>
+                </div>
+            </div>
+
+            <!-- Tab Content (Design Reference: Single Service Design) -->
+            <div id="sales" class="tab-content active reveal">
+                <div class="flex flex-col lg:flex-row gap-16 items-center">
+                    <div class="lg:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1580901369227-308f6f40bdeb?auto=format&fit=crop&q=80" class="rounded-3xl shadow-xl h-[450px] w-full object-cover" alt="Sula Sales">
+                    </div>
+                    <div class="lg:w-1/2">
+                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-blue-600"><i class="fas fa-box-open text-xl"></i></div>
+                        <h2 class="text-5xl font-extrabold mb-6">Sales & Commissioning</h2>
+                        <p class="text-lg text-gray-500 mb-10 leading-relaxed">We provide brand-new Engirise machinery with direct-to-factory pricing. Every machine undergoes professional on-site assembly and rigorous commissioning to ensure performance from Day 1.</p>
+                        <a href="#" class="bg-black text-white px-10 py-4 font-bold uppercase tracking-widest text-xs angular-cut hover:bg-blue-700 transition">View Inventory</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="rentals" class="tab-content reveal">
+                <div class="flex flex-col lg:flex-row-reverse gap-16 items-center">
+                    <div class="lg:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1690719495572-bc42843eae29?auto=format&fit=crop&q=80" class="rounded-3xl shadow-xl h-[450px] w-full object-cover" alt="Sula Rentals">
+                    </div>
+                    <div class="lg:w-1/2">
+                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-blue-600"><i class="fas fa-clock text-xl"></i></div>
+                        <h2 class="text-5xl font-extrabold mb-6">Project Rentals</h2>
+                        <p class="text-lg text-gray-500 mb-10 leading-relaxed">Manage your cash flow with flexible short and long-term rental solutions. Scale up for a 6-month road project, or get back-up for the peak mining cycle - our rental fleet is ready to deploy.</p>
+                        <a href="#" class="bg-black text-white px-10 py-4 font-bold uppercase tracking-widest text-xs angular-cut hover:bg-blue-700 transition">View Inventory</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="parts" class="tab-content reveal">
+                <div class="flex flex-col lg:flex-row gap-16 items-center">
+                    <div class="lg:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1763679112092-053a6eadd72f?auto=format&fit=crop&q=80" class="rounded-3xl shadow-xl h-[450px] w-full object-cover" alt="Freetown Parts Hub">
+                    </div>
+                    <div class="lg:w-1/2">
+                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-blue-600"><i class="fas fa-cogs text-xl"></i></div>
+                        <h2 class="text-5xl font-extrabold mb-6">Freetown Parts Hub</h2>
+                        <p class="text-lg text-gray-500 mb-10 leading-relaxed">Waiting for a sea-freight container is not an option when a site is stalled. We maintain a massive inventory: genuine filters, seals, undercarriage components, wear parts – ready for dispatch.</p>
+                        <a href="#" class="bg-blue-600 text-white px-10 py-4 font-bold uppercase tracking-widest text-xs angular-cut hover:bg-blue-700 transition">Enquire Now <i class="fab fa-whatsapp ml-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="field" class="tab-content reveal">
+                <div class="flex flex-col lg:flex-row-reverse gap-16 items-center">
+                    <div class="lg:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1774196243142-04ffcded2d59?auto=format&fit=crop&q=80" class="rounded-3xl shadow-xl h-[450px] w-full object-cover" alt="Mobile Field Support">
+                    </div>
+                    <div class="lg:w-1/2">
+                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-blue-600"><i class="fas fa-truck-pickup text-xl"></i></div>
+                        <h2 class="text-5xl font-extrabold mb-6">Mobile Field Support</h2>
+                        <p class="text-lg text-gray-500 mb-10 leading-relaxed">Our technical teams are mobile and ruggedized. We deploy to remote mining belts and infrastructure camps for repairs and preventive maintenance.</p>
+                        <a href="#" class="bg-blue-600 text-white px-10 py-4 font-bold uppercase tracking-widest text-xs angular-cut hover:bg-blue-700 transition">Enquire Now <i class="fab fa-whatsapp ml-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 2: THE HINTERLAND COMMITMENT -->
+    <section class="py-24 px-6 bg-[#0F0F0F] text-white relative">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+            <div class="reveal">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-blue-400">District-Wide Coverage</span>
+                <h2 class="text-5xl font-extrabold mt-6 mb-10">Built to Reach the Remote West African Interior.</h2>
+                <div class="space-y-6 text-lg text-gray-400 leading-relaxed">
+                    <p>Sierra Leone’s most critical work happens far from the paved roads of Freetown. Sula Equipment is structured specifically to support hinterland operations.</p>
+                    <p>We understand the logistics of Tonkolili iron ore belts; and the urgency of Port Loko infrastructure projects. Our field support strategy is built on mobility - if your machine is there, our support is there.</p>
+                </div>
+            </div>
+            <div class="reveal">
+                <!-- Abstract Map or District Graphic --
+                <div class="glass p-12 rounded-3xl border-white/5">
+                    <h4 class="text-blue-400 font-bold uppercase text-xs mb-6 tracking-widest">Active Districts</h4>
+                    <div class="grid grid-cols-2 gap-4 text-sm font-semibold opacity-80">
+                        <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-blue-600"></i> Tonkolili</div>
+                        <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-blue-600"></i> Kono</div>
+                        <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-blue-600"></i> Port Loko</div>
+                        <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-blue-600"></i> Kenema</div>
+                    </div>
+                </div> -->
+
+                <div class="relative flex items-center justify-center min-h-[500px] group">
+    <!-- Industrial Technical Grid Overlay -->
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f2937_1px,transparent_1px),linear-gradient(to_bottom,#1f2937_1px,transparent_1px)] bg-[size:45px_45px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_70%,transparent_100%)] opacity-20"></div>
+
+    <svg viewBox="0 0 500 500" class="w-full h-auto max-w-[550px] relative z-10 drop-shadow-[0_0_30px_rgba(59,130,246,0.2)]" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <filter id="blueGlow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="3" result="blur" />
+                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+        </defs>
+
+        <!-- Sierra Leone 30-Point High-Res Path -->
+        <path d="M115,115 L140,110 L155,118 L175,105 L200,108 L220,85 L245,80 L270,88 L290,82 L310,105 L325,102 L345,115 L365,138 L370,165 L385,178 L405,195 L415,225 L430,250 L425,275 L410,295 L400,320 L405,345 L390,365 L370,375 L355,400 L340,425 L320,455 L295,448 L275,455 L255,438 L230,442 L205,420 L185,428 L165,405 L145,395 L130,370 L125,345 L105,320 L85,310 L75,285 L80,260 L95,255 L105,240 L110,220 L100,205 L95,185 L92,165 L100,145 L105,130 Z" 
+              fill="#111827" 
+              stroke="#3b82f6" 
+              stroke-width="2" 
+              filter="url(#blueGlow)"
+              class="transition-colors duration-500 group-hover:stroke-blue-400" />
+
+        <!-- SITE PINS (Radar Style) -->
+
+        <!-- Port Loko (West) -->
+        <g transform="translate(145, 230)">
+            <circle r="15" fill="#3b82f6" class="animate-ping opacity-20" />
+            <circle r="4" fill="#3b82f6" stroke="white" stroke-width="1" />
+            <text x="8" y="-12" fill="#94a3b8" font-family="monospace" font-size="11" font-weight="bold" class="tracking-tighter">PORT LOKO</text>
+        </g>
+
+        <!-- Tonkolili (Central) -->
+        <g transform="translate(245, 250)">
+            <circle r="15" fill="#3b82f6" class="animate-ping opacity-20" />
+            <circle r="4" fill="#3b82f6" stroke="white" stroke-width="1" />
+            <text x="8" y="15" fill="#94a3b8" font-family="monospace" font-size="11" font-weight="bold" class="tracking-tighter">TONKOLILI</text>
+        </g>
+
+        <!-- Kono (East) -->
+        <g transform="translate(335, 215)">
+            <circle r="15" fill="#3b82f6" class="animate-ping opacity-20" />
+            <circle r="4" fill="#3b82f6" stroke="white" stroke-width="1" />
+            <text x="8" y="-12" fill="#94a3b8" font-family="monospace" font-size="11" font-weight="bold" class="tracking-tighter">KONO</text>
+        </g>
+
+        <!-- Kenema (South East) -->
+        <g transform="translate(315, 345)">
+            <circle r="15" fill="#3b82f6" class="animate-ping opacity-20" />
+            <circle r="4" fill="#3b82f6" stroke="white" stroke-width="1" />
+            <text x="8" y="18" fill="#94a3b8" font-family="monospace" font-size="11" font-weight="bold" class="tracking-tighter">KENEMA</text>
+        </g>
+
+        <!-- HUD Corner Elements -->
+        <path d="M40,40 L80,40 M40,40 L40,80" stroke="#334155" stroke-width="1" fill="none" />
+        <path d="M420,420 L460,420 M460,420 L460,380" stroke="#334155" stroke-width="1" fill="none" />
+    </svg>
+
+</div>
+
+
+
+                
+            </div>
+
+
+            
+        </div>
+    </section>
+
+    <!-- SECTION 3: FINANCIAL FLEXIBILITY -->
+    <section class="py-24 px-6 bg-white reveal">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-red-600">Pathways to Ownership</span>
+                <h2 class="text-5xl font-extrabold mt-4 mb-8">Rent-to-Own: Empowering Local Contractors.</h2>
+                <p class="text-gray-500 max-w-3xl mx-auto text-lg leading-relaxed">
+                    High interest rates and rigid banking requirements shouldn't stop Sierra Leonean contractors from owning world-class machinery. Sula Equipment offers Rent-to-Own options - put your machine to work immediately while building towards full ownership.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="glass-card p-12 rounded-3xl text-center">
+                    <i class="fas fa-file-invoice-dollar text-3xl text-blue-600 mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4">Tailored Payments</h4>
+                    <p class="text-sm text-gray-500">Aligned with your project’s milestones.</p>
+                </div>
+                <div class="glass-card p-12 rounded-3xl text-center">
+                    <i class="fas fa-tools text-3xl text-blue-600 mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4">Maintenance Inclusion</h4>
+                    <p class="text-sm text-gray-500">Keep your machine in peak condition.</p>
+                </div>
+                <div class="glass-card p-12 rounded-3xl text-center">
+                    <i class="fas fa-key text-3xl text-blue-600 mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4">Asset Ownership</h4>
+                    <p class="text-sm text-gray-500">Renter to owner without upfront capital.</p>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="#" class="bg-blue-600 text-white px-10 py-4 font-bold rounded-lg hover:bg-blue-800 transition shadow-xl shadow-blue-100 uppercase text-xs tracking-widest">Talk to Expert <i class="fab fa-whatsapp ml-3"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: FAQ -->
+    <section class="py-24 px-6 bg-gray-50">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-blue-600">Expert Advice</span>
+                <h2 class="text-4xl font-extrabold mt-4">Service & Support: Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-4 reveal">
+                <div class="glass-card p-8 rounded-2xl">
+                    <h3 class="font-bold text-lg mb-4">Can you provide on-site maintenance in remote sites like Kenema or Kono?</h3>
+                    <p class="text-gray-500 text-sm">Absolutely. Sula Equipment field service teams travel to any district in Sierra Leone for on-site servicing, maintenance, and emergency repairs.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl">
+                    <h3 class="font-bold text-lg mb-4">Do you stock genuine spare parts in Sierra Leone?</h3>
+                    <p class="text-gray-500 text-sm">Yes, Sula Equipment stocks genuine spare parts for our full inventory in Sierra Leone. We keep high-movement parts like hydraulic seals, engine filters, and ground-engaging tools (teeth and blades).</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl">
+                    <h3 class="font-bold text-lg mb-4">Can I rent a machine for a short-term project?</h3>
+                    <p class="text-gray-500 text-sm">Absolutely. Sula Equipment offers flexible rental agreements starting from one month for the full inventory – excavators, loaders, backhoes, graders, and more.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl">
+                    <h3 class="font-bold text-lg mb-4">Are Sula technicians factory-trained?</h3>
+                    <p class="text-gray-500 text-sm">Yes, every Sula technician undergoes direct factory training with Engirise Africa (the African subsidiary of Engirise). They are specialists in tropicalized engine systems and high-cycle hydraulics.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl">
+                    <h3 class="font-bold text-lg mb-4">Do you support machinery in neighboring West African countries?</h3>
+                    <p class="text-gray-500 text-sm">Yes, we support cross-border projects and regional logistics for Engirise fleets across the wider West African region.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA (Replicated Style) -->
+    <section class="py-24 px-6 bg-white">
+        <div class="max-w-5xl mx-auto dark-glass rounded-[40px] p-12 md:p-20 text-center relative overflow-hidden reveal">
+            <div class="absolute -top-20 -left-20 w-64 h-64 bg-blue-600/20 blur-[100px]"></div>
+            
+            <span class="text-xs font-bold uppercase tracking-[0.4em] text-red-500 mb-6 block">Forge Forward</span>
+            <h2 class="text-5xl md:text-6xl font-extrabold text-white mb-8 uppercase">Don’t Let Downtime Stall Your Progress.</h2>
+            <p class="text-gray-400 text-lg mb-12 max-w-2xl mx-auto">Contact our experts for more details on remote-site maintenance, genuine spare parts, and access options. Find tropicalized machinery and support solutions suited to your project.</p>
+            
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="#" class="bg-blue-600 text-white px-10 py-5 font-extrabold uppercase text-sm angular-cut flex items-center gap-3 hover:bg-blue-700 transition">
+                    Contact Sula Experts <i class="fab fa-whatsapp text-lg"></i>
+                </a>
+                <a href="#" class="bg-white text-black px-10 py-5 font-extrabold uppercase text-sm angular-cut hover:bg-gray-100 transition">
+                    View Inventory
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (Consistent with Other Pages) -->
+    <footer class="bg-black py-16 border-t border-white/5 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 lg:col-span-2">
+                    <div class="text-2xl font-black text-[#0056B3] mb-6 uppercase">SULA EQUIPMENT</div>
+                    <p class="text-gray-500 max-w-sm mb-8">Exclusive regional dealer of Engirise heavy machinery. Supporting mining, infrastructure and construction projects across Sierra Leone with reliable equipment and full lifecycle support.</p>
+                    <div class="flex gap-4 text-xl text-gray-500">
+                        <a href="#"><i class="fab fa-linkedin hover:text-white transition"></i></a>
+                        <a href="#"><i class="fab fa-facebook hover:text-white transition"></i></a>
+                        <a href="#"><i class="fab fa-instagram hover:text-white transition"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase text-xs tracking-widest text-white mb-6">Quick Links</h4>
+                    <ul class="text-gray-500 text-sm space-y-3">
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition">Inventory</a></li>
+                        <li><a href="#" class="hover:text-white transition">Industries</a></li>
+                        <li><a href="services.html" class="hover:text-white transition">Services</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase text-xs tracking-widest text-white mb-6">Contact Hub</h4>
+                    <ul class="text-gray-500 text-sm space-y-4">
+                        <li class="flex items-center gap-3"><i class="fas fa-phone-alt text-[#0056B3]"></i> +232 (0) XX XXX XXX</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-envelope text-[#0056B3]"></i> info@sulaequipment.com</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-[#0056B3]"></i> Freetown, Sierra Leone</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/5 text-center text-[10px] uppercase font-bold text-gray-600">
+                © 2026 Sula Equipment. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab Functionality
+        function openService(evt, serviceName) {
+            let i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(serviceName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        // Scroll Reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
